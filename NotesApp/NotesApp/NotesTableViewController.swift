@@ -9,29 +9,29 @@
 import UIKit
 
 class NotesTableViewController: UITableViewController {
-
-    var notes: [Note] = [Note(title: "Delegates and Protocols", body: "These were super hard and I need to study them more")]
+    
+    let noteController = NoteController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return noteController.notes.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
-        let note = notes[indexPath.row]
-        cell.textLabel?.text = note.title
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as? NoteTableViewCell else { return UITableViewCell() }
+        let note = noteController.notes[indexPath.row]
+        cell.titleLabel.text = note.title
         return cell
     }
 
@@ -71,14 +71,13 @@ class NotesTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "AddNoteSegue" {
+            let addNoteVC = segue.destination as? AddNoteViewController
+            addNoteVC?.noteController = noteController
+        }
     }
-    */
 
 }

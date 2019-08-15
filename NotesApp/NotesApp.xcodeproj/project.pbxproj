@@ -15,6 +15,8 @@
 		3DE16ABE2305F65500309AD6 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16ABD2305F65500309AD6 /* AddNoteViewController.swift */; };
 		3DE16AC02305FAD600309AD6 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16ABF2305FAD600309AD6 /* NoteDetailViewController.swift */; };
 		3DE16AC22305FC0400309AD6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16AC12305FC0400309AD6 /* Note.swift */; };
+		3DE16AC42306008E00309AD6 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16AC32306008E00309AD6 /* NoteController.swift */; };
+		3DE16AC62306137D00309AD6 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16AC52306137C00309AD6 /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3DE16ABD2305F65500309AD6 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		3DE16ABF2305FAD600309AD6 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		3DE16AC12305FC0400309AD6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		3DE16AC32306008E00309AD6 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
+		3DE16AC52306137C00309AD6 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			children = (
 				3DE16AA92305EF8000309AD6 /* AppDelegate.swift */,
 				3DE16AAD2305EF8000309AD6 /* Main.storyboard */,
+				3DE16AC52306137C00309AD6 /* NoteTableViewCell.swift */,
 				3DE16ABF2305FAD600309AD6 /* NoteDetailViewController.swift */,
 				3DE16AB02305EF8200309AD6 /* Assets.xcassets */,
 				3DE16AB22305EF8200309AD6 /* LaunchScreen.storyboard */,
@@ -69,6 +74,7 @@
 				3DE16ABB2305F2DD00309AD6 /* NotesTableViewController.swift */,
 				3DE16ABD2305F65500309AD6 /* AddNoteViewController.swift */,
 				3DE16AC12305FC0400309AD6 /* Note.swift */,
+				3DE16AC32306008E00309AD6 /* NoteController.swift */,
 			);
 			path = NotesApp;
 			sourceTree = "<group>";
@@ -145,9 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE16AC22305FC0400309AD6 /* Note.swift in Sources */,
+				3DE16AC42306008E00309AD6 /* NoteController.swift in Sources */,
 				3DE16AAA2305EF8000309AD6 /* AppDelegate.swift in Sources */,
 				3DE16AC02305FAD600309AD6 /* NoteDetailViewController.swift in Sources */,
 				3DE16ABC2305F2DD00309AD6 /* NotesTableViewController.swift in Sources */,
+				3DE16AC62306137D00309AD6 /* NoteTableViewCell.swift in Sources */,
 				3DE16ABE2305F65500309AD6 /* AddNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

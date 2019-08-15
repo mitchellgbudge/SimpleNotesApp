@@ -13,6 +13,8 @@ class AddNoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
     
+    var noteController: NoteController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +22,10 @@ class AddNoteViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        guard let newTitle = titleTextField.text, titleTextField.text != "" else { return }
+        guard let newBody = bodyTextView.text, bodyTextView.text != "" else { return }
+        let newNote = Note(title: newTitle, body: newBody)
+        noteController?.notes.append(newNote)
         navigationController?.popViewController(animated: true)
     }
     
