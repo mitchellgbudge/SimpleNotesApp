@@ -26,6 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="506-nE-po2" kind="show" identifier="NoteDetailSegue" id="owJ-P8-bei"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,6 +47,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMh-aU-Dyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="915.94202898550736" y="136.60714285714286"/>
+        </scene>
+        <!--Note Detail View Controller-->
+        <scene sceneID="ydw-qN-reO">
+            <objects>
+                <viewController id="506-nE-po2" customClass="NoteDetailViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKe-S1-I9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxc-lF-fhl">
+                                <rect key="frame" x="20" y="160" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oeL-Ha-zel">
+                                <rect key="frame" x="20" y="201" width="374" height="641"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gxc-lF-fhl" firstAttribute="leading" secondItem="2vl-23-56W" secondAttribute="leading" constant="20" id="OTA-On-5PN"/>
+                            <constraint firstItem="Gxc-lF-fhl" firstAttribute="top" secondItem="2vl-23-56W" secondAttribute="top" constant="20" id="bmQ-rY-hbd"/>
+                            <constraint firstItem="2vl-23-56W" firstAttribute="trailing" secondItem="Gxc-lF-fhl" secondAttribute="trailing" constant="20" id="kro-9F-Fhf"/>
+                            <constraint firstItem="2vl-23-56W" firstAttribute="bottom" secondItem="oeL-Ha-zel" secondAttribute="bottom" constant="20" id="nNM-10-knM"/>
+                            <constraint firstItem="2vl-23-56W" firstAttribute="trailing" secondItem="oeL-Ha-zel" secondAttribute="trailing" constant="20" id="rNC-an-bTu"/>
+                            <constraint firstItem="oeL-Ha-zel" firstAttribute="leading" secondItem="2vl-23-56W" secondAttribute="leading" constant="20" id="xEg-ao-wuq"/>
+                            <constraint firstItem="oeL-Ha-zel" firstAttribute="top" secondItem="Gxc-lF-fhl" secondAttribute="bottom" constant="20" id="znN-V8-a1f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2vl-23-56W"/>
+                    </view>
+                    <connections>
+                        <outlet property="bodyTextView" destination="oeL-Ha-zel" id="c2q-5m-bUx"/>
+                        <outlet property="titleLabel" destination="Gxc-lF-fhl" id="yCZ-wf-WmM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ek9-bZ-RnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="469"/>
         </scene>
         <!--New Note-->
         <scene sceneID="W5E-St-B4L">
