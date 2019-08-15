@@ -22,7 +22,8 @@ class AddNoteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func saveButtonPressed(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        guard let title = titleLabel.text, titleLabel.text != "" else {return}
+        navigationController?.popViewController(animated: true) 
     }
     
 
