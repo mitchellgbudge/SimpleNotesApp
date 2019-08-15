@@ -10,6 +10,8 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
 
+    var notes: [Note] = [Note(title: "Delegates and Protocols", body: "These were super hard and I need to study them more")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,25 +24,17 @@ class NotesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return notes.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
+        let note = notes[indexPath.row]
+        cell.textLabel?.text = note.title
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
