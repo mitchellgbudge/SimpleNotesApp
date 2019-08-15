@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3DE16AAA2305EF8000309AD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16AA92305EF8000309AD6 /* AppDelegate.swift */; };
-		3DE16AAC2305EF8000309AD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16AAB2305EF8000309AD6 /* ViewController.swift */; };
 		3DE16AAF2305EF8000309AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE16AAD2305EF8000309AD6 /* Main.storyboard */; };
 		3DE16AB12305EF8200309AD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE16AB02305EF8200309AD6 /* Assets.xcassets */; };
 		3DE16AB42305EF8200309AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE16AB22305EF8200309AD6 /* LaunchScreen.storyboard */; };
+		3DE16ABC2305F2DD00309AD6 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16ABB2305F2DD00309AD6 /* NotesTableViewController.swift */; };
+		3DE16ABE2305F65500309AD6 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE16ABD2305F65500309AD6 /* AddNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3DE16AA62305EF8000309AD6 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE16AA92305EF8000309AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DE16AAB2305EF8000309AD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DE16AAE2305EF8000309AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DE16AB02305EF8200309AD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DE16AB32305EF8200309AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE16AB52305EF8200309AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE16ABB2305F2DD00309AD6 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		3DE16ABD2305F65500309AD6 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				3DE16AA92305EF8000309AD6 /* AppDelegate.swift */,
-				3DE16AAB2305EF8000309AD6 /* ViewController.swift */,
 				3DE16AAD2305EF8000309AD6 /* Main.storyboard */,
 				3DE16AB02305EF8200309AD6 /* Assets.xcassets */,
 				3DE16AB22305EF8200309AD6 /* LaunchScreen.storyboard */,
 				3DE16AB52305EF8200309AD6 /* Info.plist */,
+				3DE16ABB2305F2DD00309AD6 /* NotesTableViewController.swift */,
+				3DE16ABD2305F65500309AD6 /* AddNoteViewController.swift */,
 			);
 			path = NotesApp;
 			sourceTree = "<group>";
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE16AAC2305EF8000309AD6 /* ViewController.swift in Sources */,
 				3DE16AAA2305EF8000309AD6 /* AppDelegate.swift in Sources */,
+				3DE16ABC2305F2DD00309AD6 /* NotesTableViewController.swift in Sources */,
+				3DE16ABE2305F65500309AD6 /* AddNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
