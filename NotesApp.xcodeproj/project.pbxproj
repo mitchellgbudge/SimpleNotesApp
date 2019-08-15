@@ -14,6 +14,7 @@
 		9EBEB44E2305EF7700A2479C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBEB44C2305EF7700A2479C /* LaunchScreen.storyboard */; };
 		9EBEB4562305F2E100A2479C /* NotesTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBEB4552305F2E100A2479C /* NotesTableTableViewController.swift */; };
 		9EBEB4582305F65A00A2479C /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBEB4572305F65A00A2479C /* AddNoteViewController.swift */; };
+		9EBEB45A2305FADB00A2479C /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBEB4592305FADB00A2479C /* NoteDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9EBEB44F2305EF7700A2479C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EBEB4552305F2E100A2479C /* NotesTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableTableViewController.swift; sourceTree = "<group>"; };
 		9EBEB4572305F65A00A2479C /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		9EBEB4592305FADB00A2479C /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				9EBEB4452305EF7600A2479C /* ViewController.swift */,
 				9EBEB4472305EF7600A2479C /* Main.storyboard */,
 				9EBEB4552305F2E100A2479C /* NotesTableTableViewController.swift */,
+				9EBEB4592305FADB00A2479C /* NoteDetailViewController.swift */,
 				9EBEB4572305F65A00A2479C /* AddNoteViewController.swift */,
 				9EBEB44A2305EF7700A2479C /* Assets.xcassets */,
 				9EBEB44C2305EF7700A2479C /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				9EBEB4582305F65A00A2479C /* AddNoteViewController.swift in Sources */,
 				9EBEB4462305EF7600A2479C /* ViewController.swift in Sources */,
+				9EBEB45A2305FADB00A2479C /* NoteDetailViewController.swift in Sources */,
 				9EBEB4562305F2E100A2479C /* NotesTableTableViewController.swift in Sources */,
 				9EBEB4442305EF7600A2479C /* AppDelegate.swift in Sources */,
 			);

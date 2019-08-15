@@ -26,6 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="REr-de-DJz" kind="show" identifier="NoteDetailSegue" id="fIl-8C-AK7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,6 +47,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHd-5F-YGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975.36231884057975" y="-170.08928571428569"/>
+        </scene>
+        <!--Note Detail View Controller-->
+        <scene sceneID="wS1-r1-Bca">
+            <objects>
+                <viewController id="REr-de-DJz" customClass="NoteDetailViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGv-gY-Qoz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OSu-0N-EaF">
+                                <rect key="frame" x="20" y="210" width="374" height="632"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OC-8r-moW">
+                                <rect key="frame" x="20" y="160" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dXx-Wp-jNn" firstAttribute="trailing" secondItem="OSu-0N-EaF" secondAttribute="trailing" constant="20" id="4kN-77-DwS"/>
+                            <constraint firstItem="OSu-0N-EaF" firstAttribute="leading" secondItem="dXx-Wp-jNn" secondAttribute="leading" constant="20" id="EJ0-dU-izY"/>
+                            <constraint firstItem="dXx-Wp-jNn" firstAttribute="trailing" secondItem="8OC-8r-moW" secondAttribute="trailing" constant="20" id="PtK-x5-g57"/>
+                            <constraint firstItem="8OC-8r-moW" firstAttribute="top" secondItem="dXx-Wp-jNn" secondAttribute="top" constant="20" id="oU5-jV-0wK"/>
+                            <constraint firstItem="8OC-8r-moW" firstAttribute="leading" secondItem="dXx-Wp-jNn" secondAttribute="leading" constant="20" id="qfs-sZ-tTV"/>
+                            <constraint firstItem="dXx-Wp-jNn" firstAttribute="bottom" secondItem="OSu-0N-EaF" secondAttribute="bottom" constant="20" id="ucO-IX-eXc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dXx-Wp-jNn"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="OSu-0N-EaF" id="vmU-je-1Q8"/>
+                        <outlet property="titleLabel" destination="8OC-8r-moW" id="Zdh-hf-25J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6d3-gv-7nO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749" y="206"/>
         </scene>
         <!--New Note-->
         <scene sceneID="EjO-zl-PhP">
