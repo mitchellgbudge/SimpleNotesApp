@@ -19,14 +19,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="zRm-0N-KpH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="zRm-0N-KpH" customClass="NoteTableViewCell" customModule="NotesApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zRm-0N-KpH" id="Gft-8N-IV2">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oD-9j-UrY">
+                                            <rect key="frame" x="20" y="11" width="42" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUK-tR-QLu">
+                                            <rect key="frame" x="312" y="11" width="82" height="21.5"/>
+                                            <state key="normal" title="Not Studied"/>
+                                            <connections>
+                                                <action selector="studiedButtonPressed:" destination="zRm-0N-KpH" eventType="touchUpInside" id="ZcC-aj-5bA"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1oD-9j-UrY" firstAttribute="top" secondItem="Gft-8N-IV2" secondAttribute="topMargin" id="5si-pi-myF"/>
+                                        <constraint firstItem="DUK-tR-QLu" firstAttribute="trailing" secondItem="Gft-8N-IV2" secondAttribute="trailingMargin" id="CaB-10-NcZ"/>
+                                        <constraint firstItem="DUK-tR-QLu" firstAttribute="top" secondItem="Gft-8N-IV2" secondAttribute="topMargin" id="EU9-Bx-cnH"/>
+                                        <constraint firstItem="1oD-9j-UrY" firstAttribute="centerY" secondItem="Gft-8N-IV2" secondAttribute="centerY" id="KjM-r1-ajb"/>
+                                        <constraint firstItem="1oD-9j-UrY" firstAttribute="leading" secondItem="Gft-8N-IV2" secondAttribute="leadingMargin" id="VgR-F8-X6k"/>
+                                        <constraint firstItem="DUK-tR-QLu" firstAttribute="centerY" secondItem="Gft-8N-IV2" secondAttribute="centerY" id="iBE-hN-2jl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="studiedButton" destination="DUK-tR-QLu" id="pez-oT-H5H"/>
+                                    <outlet property="titleLabel" destination="1oD-9j-UrY" id="zQv-8C-KXU"/>
                                     <segue destination="REr-de-DJz" kind="show" identifier="NoteDetailSegue" id="fIl-8C-AK7"/>
                                 </connections>
                             </tableViewCell>
