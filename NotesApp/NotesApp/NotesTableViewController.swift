@@ -77,6 +77,10 @@ class NotesTableViewController: UITableViewController {
         if segue.identifier == "AddNoteSegue" {
             let addNoteVC = segue.destination as? AddNoteViewController
             addNoteVC?.noteController = noteController
+        } else if segue.identifier == "NoteDetailSegue" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let noteDetailVC = segue.destination as? NoteDetailViewController
+            noteDetailVC?.note = noteController.notes[indexPath.row]
         }
     }
 
